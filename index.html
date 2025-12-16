@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+    /* Estilo do Card */
+    .whatsapp-card {
+        background: white;
+        max-width: 350px; /* Largura ideal */
+        margin: 20px auto;
+        padding: 30px 25px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        text-align: center;
+        font-family: 'Segoe UI', sans-serif;
+        border: 1px solid #f0f0f0;
+    }
+
+    /* Status Online */
+    .status-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background-color: #e6fffa;
+        color: #047857;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .dot {
+        width: 8px;
+        height: 8px;
+        background-color: #10B981;
+        border-radius: 50%;
+        animation: blink 1.5s infinite;
+    }
+
+    /* Textos */
+    .card-title {
+        color: #0F4C75; /* Azul da Marca */
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    .card-subtitle {
+        color: #666;
+        font-size: 0.95rem;
+        margin-bottom: 25px;
+        line-height: 1.4;
+    }
+
+    /* Botão */
+    .btn-whatsapp-full {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background: #25D366;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1rem;
+        padding: 16px;
+        border-radius: 12px;
+        transition: transform 0.2s, box-shadow 0.2s;
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    }
+
+    .btn-whatsapp-full:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(37, 211, 102, 0.5);
+        background: #20bd5a;
+    }
+
+    @keyframes blink {
+        0% { opacity: 1; }
+        50% { opacity: 0.4; }
+        100% { opacity: 1; }
+    }
+</style>
+</head>
+<body>
+
+    <div class="whatsapp-card">
+        
+        <div class="status-badge">
+            <span class="dot"></span> Online Agora
+        </div>
+
+        <div class="card-title">Sítio Milagre da Vida</div>
+        <p class="card-subtitle">Queijos Premiados & Leite A2A2.<br>Toque abaixo para pedir:</p>
+
+        <a href="https://wa.me/5565999407734?text=Olá!%20Vim%20pelo%20Link%20da%20Bio%20e%20gostaria%20de%20atendimento." class="btn-whatsapp-full" target="_blank">
+            <i class="fab fa-whatsapp" style="font-size: 24px;"></i>
+            Chamar no WhatsApp
+        </a>
+        
+        <p style="font-size: 0.75rem; color: #999; margin-top: 15px;">Atendimento rápido e personalizado</p>
+
+    </div>
+
+</body>
+</html>
