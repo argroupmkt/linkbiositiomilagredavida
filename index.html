@@ -1,86 +1,105 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-<style>
-    /* Estilo do Card */
-    .whatsapp-card {
-        background: white;
-        max-width: 350px; /* Largura ideal */
-        margin: 20px auto;
-        padding: 30px 25px;
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-        text-align: center;
-        font-family: 'Segoe UI', sans-serif;
-        border: 1px solid #f0f0f0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <title>Sítio Milagre da Vida</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* Reset básico */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    /* Status Online */
-    .status-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        background-color: #e6fffa;
-        color: #047857;
-        padding: 5px 12px;
-        border-radius: 20px;
-        font-size: 0.8rem;
-        font-weight: bold;
-        margin-bottom: 20px;
-    }
-    .dot {
-        width: 8px;
-        height: 8px;
-        background-color: #10B981;
-        border-radius: 50%;
-        animation: blink 1.5s infinite;
-    }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f7f6; /* Fundo cinza claro para destacar o cartão */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh; /* Garante que ocupa a altura toda */
+            padding: 20px;
+        }
 
-    /* Textos */
-    .card-title {
-        color: #0F4C75; /* Azul da Marca */
-        font-size: 1.4rem;
-        font-weight: bold;
-        margin-bottom: 5px;
-    }
-    .card-subtitle {
-        color: #666;
-        font-size: 0.95rem;
-        margin-bottom: 25px;
-        line-height: 1.4;
-    }
+        /* Estilo do Card */
+        .whatsapp-card {
+            background: white;
+            width: 100%;           /* Ocupa a largura disponível */
+            max-width: 400px;      /* Mas não passa de 400px */
+            padding: 40px 25px;    /* Mais espaçamento interno */
+            border-radius: 25px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1); /* Sombra mais forte */
+            text-align: center;
+            border: 1px solid #ffffff;
+        }
 
-    /* Botão */
-    .btn-whatsapp-full {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        background: #25D366;
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 1.1rem;
-        padding: 16px;
-        border-radius: 12px;
-        transition: transform 0.2s, box-shadow 0.2s;
-        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-    }
+        /* Status Online */
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #e6fffa;
+            color: #047857;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .dot {
+            width: 10px;
+            height: 10px;
+            background-color: #10B981;
+            border-radius: 50%;
+            animation: blink 1.5s infinite;
+        }
 
-    .btn-whatsapp-full:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(37, 211, 102, 0.5);
-        background: #20bd5a;
-    }
+        /* Textos */
+        .card-title {
+            color: #0F4C75; /* Azul da Marca */
+            font-size: 1.6rem; /* Aumentei a fonte */
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        
+        .card-subtitle {
+            color: #666;
+            font-size: 1.1rem; /* Aumentei a fonte */
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
 
-    @keyframes blink {
-        0% { opacity: 1; }
-        50% { opacity: 0.4; }
-        100% { opacity: 1; }
-    }
-</style>
+        /* Botão */
+        .btn-whatsapp-full {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem; /* Botão maior */
+            padding: 18px;
+            border-radius: 15px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+            width: 100%; /* Botão ocupa toda a largura do card */
+        }
+
+        .btn-whatsapp-full:active {
+            transform: scale(0.98); /* Efeito de clique no celular */
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.4; }
+            100% { opacity: 1; }
+        }
+    </style>
 </head>
 <body>
 
@@ -93,12 +112,12 @@
         <div class="card-title">Sítio Milagre da Vida</div>
         <p class="card-subtitle">Queijos Premiados & Leite A2A2.<br>Toque abaixo para pedir:</p>
 
-        <a href="https://wa.me/5565999407734?text=Olá!%20Vim%20pelo%20Link%20da%20Bio%20e%20gostaria%20de%20atendimento." class="btn-whatsapp-full" target="_blank">
-            <i class="fab fa-whatsapp" style="font-size: 24px;"></i>
+        <a href="https://wa.me/5565999407734?text=Olá!%20Vim%20pelo%20Link%20da%20Bio%20e%20gostaria%20de%20atendimento." class="btn-whatsapp-full">
+            <i class="fab fa-whatsapp" style="font-size: 28px;"></i>
             Chamar no WhatsApp
         </a>
         
-        <p style="font-size: 0.75rem; color: #999; margin-top: 15px;">Atendimento rápido e personalizado</p>
+        <p style="font-size: 0.85rem; color: #999; margin-top: 20px;">Atendimento rápido e personalizado</p>
 
     </div>
 
